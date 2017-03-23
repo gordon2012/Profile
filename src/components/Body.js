@@ -11,14 +11,11 @@ export default class Body extends Component {
 
     const prompts = [
       { header: 'let', text: [
-        'Lorem',
-        'Ipsum',
-        'Dolor'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac tristique est. Pellentesque tortor justo, maximus quis purus a, lobortis fermentum ipsum. Sed sed commodo nulla. Aliquam faucibus egestas metus, eu interdum nisi suscipit sollicitudin. Duis imperdiet augue est, sed laoreet lacus mollis id. Curabitur id auctor odio.',
+        'Nam et congue nibh, nec aliquam dui. Aliquam accumsan, enim ut ultricies venenatis, urna metus ultricies orci, eu accumsan urna leo ultrices urna. Proin quis diam ac sapien tempor viverra id nec tortor. Nunc tempor massa metus, non egestas elit facilisis a. Donec quis luctus turpis. Aliquam eleifend.',
       ]},
       { header: 'const', text: [
-        'Lorem',
-        'Ipsum',
-        'Dolor'
+        'Cras tempor ex tortor, vitae aliquam lectus pulvinar eget. Suspendisse posuere accumsan nulla. Pellentesque non neque id nisi iaculis sodales. Vivamus eleifend vestibulum placerat. Sed tincidunt vestibulum mauris eu molestie. Donec euismod lectus in vehicula iaculis. Mauris ut nisl purus. Curabitur ac risus quis erat pellentesque euismod. Donec.'
       ]},
       { header: 'ES6 Classes', text: [
         'Lorem',
@@ -55,9 +52,6 @@ export default class Body extends Component {
           { prompts.map((e,i) =>
             <Article key={i} header={e.header} text={e.text} />
           )}
-
-
-
         </section>
       </div>
     );
