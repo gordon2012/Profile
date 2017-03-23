@@ -11,31 +11,24 @@ export default class Body extends Component {
 
     const prompts = [
       { header: 'let', text: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac tristique est. Pellentesque tortor justo, maximus quis purus a, lobortis fermentum ipsum. Sed sed commodo nulla. Aliquam faucibus egestas metus, eu interdum nisi suscipit sollicitudin. Duis imperdiet augue est, sed laoreet lacus mollis id. Curabitur id auctor odio.',
-        'Nam et congue nibh, nec aliquam dui. Aliquam accumsan, enim ut ultricies venenatis, urna metus ultricies orci, eu accumsan urna leo ultrices urna. Proin quis diam ac sapien tempor viverra id nec tortor. Nunc tempor massa metus, non egestas elit facilisis a. Donec quis luctus turpis. Aliquam eleifend.',
+        'The let keyword, introduced in ES6, is one of the replacement keywords for var. While var is function scoped and the declaration is hoisted to the top of the function, let is block scoped and the declaration remains in place. A common use case for let is in for loops.'
       ]},
       { header: 'const', text: [
-        'Cras tempor ex tortor, vitae aliquam lectus pulvinar eget. Suspendisse posuere accumsan nulla. Pellentesque non neque id nisi iaculis sodales. Vivamus eleifend vestibulum placerat. Sed tincidunt vestibulum mauris eu molestie. Donec euismod lectus in vehicula iaculis. Mauris ut nisl purus. Curabitur ac risus quis erat pellentesque euismod. Donec.'
+        'Also new with ES6, the const keyword is block scoped like the let keyword, in addition to not being permitted to change. Any attempt to change it will throw an exception.'
       ]},
       { header: 'ES6 Classes', text: [
-        'Lorem',
-        'Ipsum',
-        'Dolor'
+        'In ES6, the new class keyword is a form of syntactic sugar over an object\'s prototype, facilitating the use of constructors and inheritance, and to create instance objects.'
       ]},
       { header: 'import/export', text: [
-        'Lorem',
-        'Ipsum',
-        'Dolor'
+        'Many competing forms of the Module design pattern have been created for JavaScript in which source code can be stored in multiple files and be brought together as needed. This is known as dependency injection.',
+        'In ES6, a winner has been declared in the form of import/export. The export keyword is used to define a module to be later used. The import keyword is used to load that module in.'
       ]},
       { header: 'JSX', text: [
-        'Lorem',
-        'Ipsum',
-        'Dolor'
+        'JSX stands for Javascript Syntax eXtension, and is the most common way to write React components. It gets translated by Babel to React.CreateElement calls and is further syntactic sugar over standard ES6. This is the reason why the React object must be imported into component files, even though it does not appear to be used.',
+        'Do not forget to always have one root component with children components inside, as having multiple components as the root element is not valid.'
       ]},
       { header: 'this.props', text: [
-        'Lorem',
-        'Ipsum',
-        'Dolor'
+        'In React, this.props refers to a component\'s props or properties. They are similar to an HTML element\'s attributes in how they are passed. A special case is this.props.children, which represents all the children elements passed in between the component\'s opening and closing tags.'
       ]}
     ];
 
@@ -48,7 +41,6 @@ export default class Body extends Component {
 
         <section>
           <h2>Feynman Writing Prompts</h2>
-
           { prompts.map((e,i) =>
             <Article key={i} header={e.header} text={e.text} />
           )}
