@@ -1,3 +1,9 @@
+html, body, p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+
 .App {
   display: flex;
   min-height: 100vh;
@@ -8,41 +14,66 @@
 .NavBar {
   background-color: #222;
   color: white;
-  font-size: large;
-
   display: flex;
 }
 .NavBar img {
-  margin: 8px 16px 0;
-}
-.NavBar div {
-  flex: 1;
-  display: flex;
+  height: 64px;
+  margin: 4px 0 0 8px;
 }
 .NavBar span {
   margin: auto;
   font-size: 36px;
 }
+@media (min-width: 900px) {
+  .NavBar img {
+    height: 121px;
+    margin: 8px 0 0 16px;
+  }
+  .NavBar span {
+    font-size: 48px;
+  }
+}
+.NavBar div {
+  flex: 1;
+  display: flex;
+}
 
 
 .Body {
   flex: 1;
-  width: 80%;
-  margin: auto;
+  background: #eee;
 }
-.Body article {
-  border: 1px solid black;
-  margin-top: 8px;
+.Body section {
+  background: white;
+  border: 1px solid lightgrey;
+  margin: 8px;
 }
-.Body-title span {
-  margin: auto;
-  font-size: 24px;
+@media (min-width: 900px) {
+  .Body section {
+    max-width: 850px;
+    margin: 8px auto;
+  }
+}
+.Body section {
+  padding: 0 16px;
+}
+.Body section > h2 {
+  margin: 16px 0 16px 16px;
+}
+
+
+.Article h3 {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 16px;
+  padding-top: 16px;
+}
+.Article p {
+  margin: 0 0 16px 0;
 }
 
 
 .Footer {
-  height: 64px;
-  background: whitesmoke;
+  background: lightgray;
   display: flex;
 }
 .Footer section {
@@ -52,15 +83,13 @@
   flex: 1;
 }
 .Footer-links {
-  margin: 8px;
+  margin: 6px;
 }
-
 .Footer section span {
   margin: auto;
 }
-
 .Footer-github {
   margin: auto;
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
 }
